@@ -67,3 +67,19 @@ lib/firebase_options.dart
 functions/venv/
 functions/.runtimeconfig.json
 node_modules/
+
+# Local environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Service account credentials (CRITICAL)
+serviceAccountKey.json
+*.pem
+
+# Firebase local data and logs
+.firebase/
+firebase-debug.log
+node_modules/

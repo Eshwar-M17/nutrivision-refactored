@@ -1,1 +1,28 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"project-nutrivision","appId":"1:127326940526:android:013bdf5a1567a6d789257f","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"project-nutrivision","configurations":{"android":"1:127326940526:android:013bdf5a1567a6d789257f","ios":"1:127326940526:ios:9b22d88304cc199a89257f"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "project-nutrivision",
+          "appId": "1:127326940526:android:013bdf5a1567a6d789257f",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "project-nutrivision",
+          "configurations": {
+            "android": "1:127326940526:android:013bdf5a1567a6d789257f",
+            "ios": "1:127326940526:ios:9b22d88304cc199a89257f"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "africa-south1",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
