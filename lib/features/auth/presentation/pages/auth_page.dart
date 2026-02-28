@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nutrivision/core/logger/app_logger.dart';
 import 'package:nutrivision/features/auth/presentation/widgets/animated_tab_slider.dart';
 import 'package:nutrivision/features/auth/presentation/widgets/sign_in_widget.dart';
 import 'package:nutrivision/features/auth/presentation/widgets/sign_up_widget.dart';

@@ -5,6 +5,7 @@ import 'package:nutrivision/core/logger/app_logger.dart';
 import 'package:nutrivision/features/auth/presentation/pages/auth_page.dart';
 import 'package:nutrivision/features/auth/presentation/viewmodel/auth_notifier.dart';
 import 'package:nutrivision/features/auth/presentation/viewmodel/state/auth_state.dart';
+import 'package:nutrivision/features/user/presentation/pages/profile_setup_wizard.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -20,7 +21,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       final currentPath = state.uri.path;
 
       appLogger.i(
-        "redirecting current path ${currentPath} ${authState.runtimeType}",
+        "redirecting current path $currentPath ${authState.runtimeType}",
       );
       switch (authState) {
         case Initial():
@@ -38,7 +39,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           if (authRouts.contains(currentPath)) {
             appLogger.i(AppRouts.home);
 
-            return AppRouts.home;
+            return AppRouts.profileSetUpWizard;
           }
 
           break;
@@ -61,6 +62,10 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: AppRouts.splashScreen,
         builder: (context, state) => SplashScreen(),
       ),
+       GoRoute(
+        path: AppRouts.profileSetUpWizard,
+        builder: (context, state) => ProfileSetupWizard(),
+      ),
       GoRoute(path: AppRouts.home, builder: (context, state) => Home()),
     ],
   );
@@ -70,6 +75,7 @@ class AppRouts {
   AppRouts._();
   static const String authPage = "/auth";
   static const String home = "/home";
+  static const String profileSetUpWizard = "/profile_setup";
   static const String splashScreen = "/";
 }
 

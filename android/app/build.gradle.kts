@@ -32,6 +32,20 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+   flavorDimensions.add("env")
+
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+            resValue("string", "app_name", "NutriVision (Dev)")
+        }
+        create("prod") {
+            dimension = "env"
+            applicationIdSuffix = ""
+            resValue("string", "app_name", "NutriVision")
+        }
+    }
 
     buildTypes {
         release {
